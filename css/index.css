@@ -258,6 +258,7 @@ ul {
 }
 .main-content .features .card-title {
   font-size: 3rem;
+  color: #9ca4b6;
 }
 .main-content .features .card-info {
   margin: 10px 0;
@@ -265,9 +266,9 @@ ul {
 .main-content .features .button {
   padding: 10px;
   max-height: 50px;
-  background: #007ae1;
+  background: #5933f0;
   color: #f8f8f8;
-  border: 1px solid #1ca8dd;
+  border: 1px solid #9ca4b6;
 }
 .main-content .description * {
   margin: 20px 0;

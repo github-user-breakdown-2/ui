@@ -6,13 +6,19 @@ class Carousel {
         this.carouselItems = carousel.querySelectorAll('.card');
         this.carouselItems[0].style.display = 'block';
         this.currentItem = 0;
+        this.timer = null;
+
 
         this.leftButton.addEventListener('click', _ => this.changeItem(false));
         this.rightButton.addEventListener('click', _ => this.changeItem(true));
+
+        this.resetTimer();
     }
 
     changeItem(goRight) {
+
         this.carouselItems[this.currentItem].style.display = 'none';
+
         if(goRight) {
             if(this.currentItem + 1 > this.carouselItems.length - 1) {
                 this.currentItem = 0;
@@ -26,11 +32,22 @@ class Carousel {
                 this.currentItem--;
             }
         }
+
         this.carouselItems[this.currentItem].style.display = 'block';
+
+        //Reset Timer
+        this.resetTimer();
+    }
+
+    resetTimer() {
+        clearInterval(this.timer);  
+
+        this.timer = setInterval(() => {
+            this.changeItem(true);
+        }, 3000);
     }
 }
 
 document.querySelectorAll('.features').forEach(function(carousel){
-    console.log("huh")
     return new Carousel(carousel);
 });
