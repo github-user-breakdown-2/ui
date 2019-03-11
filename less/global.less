@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    //1 Rem = 1 Px
+    font-size: 62.5%;
+
+    background: @black;
+    color: @white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+}
+
+.container {
+    max-width: @maxwidth;
+    width: 90%;
+    margin: 0 auto;
+
+    text-align: center;
+
+    @media @mobile {
+        max-width: @maxwidthmobile;
+    }
+}

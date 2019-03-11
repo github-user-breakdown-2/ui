@@ -1,0 +1,13 @@
+{
+  "name": "github_build_week",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile:less": "less-watch-compiler less css index.less",
+    "live-server": "live-server --no-css-inject",
+    "start": "concurrently --names \"less-compiler,live-server\" \"npm run compile:less\" \"live-server\" -k"
+  },
+  "author": "",
+  "license": "MIT"
+}
