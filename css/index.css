@@ -146,6 +146,33 @@ table {
     top: 0;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(4px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-6px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(6px, 0, 0);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -178,6 +205,42 @@ ul {
   .container {
     max-width: 500px;
   }
+}
+.nav-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 15px;
+  background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
+  color: #f8f8f8;
+  font-size: 2rem;
+  border: 1px solid #2f323a;
+  border-radius: 3px;
+  outline: none;
+  transform: rotate(90deg);
+}
+.nav-menu {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  display: none;
+  flex-direction: column;
+  background: #f8f8f8;
+  border-radius: 3px;
+  width: 20%;
+}
+.nav-menu-active {
+  display: flex;
+}
+.nav-menu-item {
+  padding: 10px 0;
+  font-size: 1.8rem;
+  color: #9ca4b6;
+  text-decoration: none;
+  border-bottom: 1px solid #9ca4b6;
+}
+.nav-menu-item:last-of-type {
+  border-bottom: none;
 }
 .header {
   display: flex;
@@ -232,6 +295,9 @@ ul {
   }
 }
 .header .title {
+  background-image: linear-gradient(to top, #9ca4b6, #f8f8f8);
+  -webkit-background-clip: text;
+  color: transparent;
   margin-top: 22vh;
 }
 @media (min-width: 500px) and (max-width: 800px) {
@@ -240,7 +306,7 @@ ul {
   }
 }
 .main-content section {
-  margin: 50px 0;
+  margin: 20px 0;
 }
 .main-content .features {
   display: flex;
@@ -249,26 +315,39 @@ ul {
   align-items: center;
 }
 .main-content .features .card {
-  width: 50%;
   display: none;
+  width: 50%;
   margin: 10px;
+  padding: 10px;
+  animation: fadeIn 3s;
+}
+@media (max-width: 500px) {
+  .main-content .features .card {
+    width: 75%;
+    margin: 0;
+  }
 }
 .main-content .features .card-image {
   margin: 20px 0;
 }
 .main-content .features .card-title {
   font-size: 3rem;
-  color: #9ca4b6;
 }
 .main-content .features .card-info {
   margin: 10px 0;
+  color: #9ca4b6;
 }
 .main-content .features .button {
   padding: 10px;
   max-height: 50px;
-  background: #5933f0;
+  background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
   color: #f8f8f8;
-  border: 1px solid #9ca4b6;
+  border: 1px solid #2f323a;
+  border-radius: 3px;
+  outline: none;
+}
+.main-content .features .button:active {
+  animation: shake 1s;
 }
 .main-content .description * {
   margin: 20px 0;

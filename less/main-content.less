@@ -1,6 +1,6 @@
 .main-content {
     section {
-        margin: 50px 0;
+        margin: 20px 0;
     }
 
     .features {
@@ -10,9 +10,18 @@
         align-items: center;
 
         .card {
-            width: 50%;
             display: none;
+
+            width: 50%;
             margin: 10px;
+            padding: 10px;
+
+            @media @mobile {
+                width: 75%;
+                margin: 0;
+            }
+
+            animation: fadeIn 3s;
 
             &-image {
                 margin: 20px 0;
@@ -20,11 +29,11 @@
 
             &-title {
                 font-size: 3rem;
-                color: @gray;
             }
 
             &-info {
                 margin: 10px 0;
+                color: @gray;
             }
         }
 
@@ -32,9 +41,18 @@
             padding: 10px;
             max-height: 50px;
 
-            background: @darkpurple;
+            background-image: linear-gradient(to right bottom,
+                rgba(@darkblue, 1),
+                rgba(@darkpurple, 1));
             color: @white;
-            border: 1px solid @gray;
+
+            border: 1px solid @black;
+            border-radius: 3px;
+            outline: none;
+
+            &:active {
+                animation: shake 1s;
+            }
         }
     }
 

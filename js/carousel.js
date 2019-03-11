@@ -35,7 +35,6 @@ class Carousel {
 
         this.carouselItems[this.currentItem].style.display = 'block';
 
-        //Reset Timer
         this.resetTimer();
     }
 

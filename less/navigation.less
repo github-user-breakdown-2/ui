@@ -1,0 +1,53 @@
+.nav {
+    &-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 15px;
+
+        background-image: linear-gradient(to right bottom,
+            rgba(@darkblue, 1),
+            rgba(@darkpurple, 1));
+        color: @white;
+
+        font-size: 2rem;
+
+        border: 1px solid @black;
+        border-radius: 3px;
+        outline: none;
+
+        transform: rotate(90deg);
+    }
+
+    &-menu {
+        position: fixed;
+        top: 100px;
+        left: 20px;
+
+        display: none;
+        flex-direction: column;
+
+        background: @white;
+        border-radius: 3px;
+
+        width: 20%;
+
+        &-active {
+            display: flex;
+        }
+
+        &-item {
+            padding: 10px 0;
+            font-size: 1.8rem;
+            color: @gray;
+            text-decoration: none;
+
+            border-bottom: 1px solid @gray;
+        }
+
+        &-item:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+}
