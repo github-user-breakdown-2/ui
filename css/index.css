@@ -136,6 +136,16 @@ table {
     top: 0;
   }
 }
+@keyframes risingGraphTablet {
+  from {
+    top: 35vh;
+    height: 0;
+  }
+  to {
+    height: 35vh;
+    top: 0;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -195,6 +205,7 @@ ul {
     width: 70%;
     left: 15%;
     height: 35vh;
+    animation: risingGraphTablet 1s;
   }
 }
 @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
