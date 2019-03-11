@@ -1,0 +1,36 @@
+.main-content {
+    section {
+        margin: 50px 0;
+    }
+
+    .features {
+        display: flex;
+
+        @media @mobile {
+            flex-wrap: wrap;
+        }
+
+        .card {
+            margin: 10px;
+
+            @media @mobile {
+                width:100%;
+            }
+        }
+    }
+
+    .description {
+        * {
+            margin: 20px 0;
+        }
+        
+        ul {
+            list-style: disc;
+            list-style-position: inside;
+
+            li {
+                margin: 5px 0;
+            }
+        }
+    }
+}
