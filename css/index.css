@@ -244,19 +244,14 @@ ul {
 }
 .main-content .features {
   display: flex;
-}
-@media (max-width: 500px) {
-  .main-content .features {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .main-content .features .card {
+  width: 50%;
+  display: none;
   margin: 10px;
-}
-@media (max-width: 500px) {
-  .main-content .features .card {
-    width: 100%;
-  }
 }
 .main-content .features .card-image {
   margin: 20px 0;
@@ -266,6 +261,13 @@ ul {
 }
 .main-content .features .card-info {
   margin: 10px 0;
+}
+.main-content .features .button {
+  padding: 10px;
+  max-height: 50px;
+  background: #007ae1;
+  color: #f8f8f8;
+  border: 1px solid #1ca8dd;
 }
 .main-content .description * {
   margin: 20px 0;

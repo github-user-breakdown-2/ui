@@ -5,17 +5,14 @@
 
     .features {
         display: flex;
-
-        @media @mobile {
-            flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
 
         .card {
+            width: 50%;
+            display: none;
             margin: 10px;
-
-            @media @mobile {
-                width: 100%;
-            }
 
             &-image {
                 margin: 20px 0;
@@ -28,6 +25,15 @@
             &-info {
                 margin: 10px 0;
             }
+        }
+
+        .button {
+            padding: 10px;
+            max-height: 50px;
+
+            background: @darkblue;
+            color: @white;
+            border: 1px solid @lightblue;
         }
     }
 
