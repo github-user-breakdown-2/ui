@@ -136,6 +136,14 @@ table {
     top: 0;
   }
 }
+@keyframes fontSizeGrow {
+  from {
+    font-size: 3.5rem;
+  }
+  to {
+    font-size: 5rem;
+  }
+}
 @keyframes risingGraphTablet {
   from {
     top: 35vh;
@@ -218,6 +226,32 @@ ul {
 @media (max-width: 500px) {
   .container {
     max-width: 500px;
+  }
+}
+.main-content .call-to-action {
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px;
+  background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
+  color: #f8f8f8;
+  border: 1px solid #2f323a;
+  border-radius: 5px;
+  outline: none;
+  font-size: 3rem;
+  padding: 20px;
+  animation: backgroundShift 750ms infinite;
+}
+.main-content .call-to-action:active {
+  animation: shake 1s;
+}
+@media (max-width: 500px) {
+  .main-content .call-to-action {
+    width: 90%;
+  }
+}
+@media (min-width: 500px) and (max-width: 800px) {
+  .main-content .call-to-action {
+    width: 60%;
   }
 }
 .main-content .features {
@@ -375,36 +409,11 @@ ul {
   color: transparent;
   margin-top: 22vh;
   margin-bottom: 30px;
+  animation: fontSizeGrow 1.5s;
 }
 @media (min-width: 500px) and (max-width: 800px) {
   .header .title {
     margin-top: 37vh;
-  }
-}
-.header .call-to-action {
-  width: 30%;
-  margin: 0 auto;
-  padding: 10px;
-  background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
-  color: #f8f8f8;
-  border: 1px solid #2f323a;
-  border-radius: 5px;
-  outline: none;
-  font-size: 3rem;
-  padding: 20px;
-  animation: backgroundShift 500ms infinite;
-}
-.header .call-to-action:active {
-  animation: shake 1s;
-}
-@media (max-width: 500px) {
-  .header .call-to-action {
-    width: 90%;
-  }
-}
-@media (min-width: 500px) and (max-width: 800px) {
-  .header .call-to-action {
-    width: 60%;
   }
 }
 .footer {

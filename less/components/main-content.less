@@ -1,4 +1,23 @@
 .main-content {
+    
+    .call-to-action {
+        width: 30%;
+        margin: 0 auto;
+        
+        .fancy-button();
+        font-size: 3rem;
+        padding: 20px;
+
+        animation: backgroundShift 750ms infinite;
+
+        @media @mobile {
+            width: 90%;
+        }
+
+        @media @tablet {
+            width: 60%;
+        }
+    }
 
     .features {
         display: flex;
