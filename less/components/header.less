@@ -7,7 +7,7 @@
     position: absolute;
     left: 25%;
     width: 50%;
-    height: 20vh;
+    height: 35vh;
 
     animation: risingGraph 1s;
 
@@ -19,20 +19,15 @@
     @media @tablet {
       width: 70%;
       left: 15%;
-      height: 35vh;
-
-      animation: risingGraphTablet 1s;
     }
 
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(@darkpurple, 0.4),
-      rgba(@lightpurple, 0.4)
-    );
+  
     background-size: cover;
     background-position: top;
 
     &-1 {
+      .gradient(@darkpurple, @darkblue, 1);
+
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(
           36% 88%,
@@ -56,13 +51,7 @@
     }
 
     &-2 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(@darkblue, 0.4),
-        rgba(@lightblue, 0.4)
-      );
-      background-size: cover;
-      background-position: top;
+      .gradient(@darkblue, @lightblue, .4);
 
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(
@@ -87,6 +76,8 @@
     }
 
     &-3 {
+      .gradient(@darkblue, @lightpurple, .4);
+      
       @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(
           37% 81%,
@@ -111,11 +102,11 @@
   }
 
   .title {
-    background-image: linear-gradient(to top, @gray, @white);
+    .gradient(@gray, @white, 1);
     -webkit-background-clip: text;
     color: transparent;
 
-    margin-top: 22vh;
+    margin-top: 37vh;
     margin-bottom: 30px;
 
     animation: fontSizeGrow 500ms;

@@ -1,19 +1,22 @@
 .fancy-button() {
   padding: 10px;
 
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(@darkblue, 1),
-    rgba(@darkpurple, 1)
-  );
+  .gradient(@darkblue, @darkpurple, 1);
   color: @white;
 
   border: 1px solid @black;
   border-radius: 5px;
   outline: none;
-  box-shadow: 1px 1px @gray;
 
   &:active {
     animation: shake 1s;
   }
+}
+
+.gradient(@firstColor, @secondColor, @transparency) {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(@firstColor, @transparency),
+    rgba(@secondColor, @transparency)
+  );
 }

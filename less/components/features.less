@@ -1,0 +1,41 @@
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+    .card {
+        display: none;
+
+        height: 100%;
+        width: 50%;
+        margin: 30px;
+        padding: 10px;
+
+        @media @mobile {
+            width: 75%;
+            margin: 0;
+        }
+
+        animation: fadeIn 3s;
+
+        &-icon {
+            margin: 20px 0;
+            font-size: 15rem;
+        }
+
+        &-title {
+            font-size: 3rem;
+        }
+
+        &-info {
+            margin: 10px 0;
+            color: @gray;
+        }
+    }
+
+    .button {
+        .fancy-button();
+    }
+}

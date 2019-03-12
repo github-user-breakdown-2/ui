@@ -1,0 +1,44 @@
+.team {
+    .teammate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .gradient(@darkpurple, @darkblue, .4);
+        
+        padding: 10px;
+        margin: 30px auto;
+        width: 50%;
+        border-radius: 10px;
+
+        @media @mobile {
+            width: 90%;
+        }
+
+        &-photo {
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+        }
+
+        &-info {
+            margin-top: 5px;
+
+            &-name {
+                font-size: 3rem;
+            }
+
+            &-role {
+                font-size: 2rem;
+            }
+
+            &-github {
+                color: @white;
+                width: 50px;
+                height: 50px;
+                margin: 10px 0;
+            }
+        }
+    }
+}
