@@ -1,83 +1,127 @@
 .header {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-    .chart {
-        position: absolute;
-        left: 25%;
-        width: 50%;
-        height: 20vh;
+  .chart {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 20vh;
 
-        animation: risingGraph 1s;
+    animation: risingGraph 1s;
 
-        @media @mobile {
-            width: 100%;
-            left: 0;
-        }
-
-        @media @tablet {
-            width: 70%;
-            left: 15%;
-            height: 35vh;
-
-            animation: risingGraphTablet 1s;
-        }
-
-        background-image: linear-gradient(to right bottom,
-            rgba(@darkpurple, 0.4),
-            rgba(@lightpurple, 0.4));
-        background-size: cover;
-        background-position: top;
-
-        &-1 {
-
-            @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-                -webkit-clip-path: polygon(36% 88%, 48% 66%, 58% 86%, 83% 57%, 100% 100%, 0 100%, 3% 50%);
-                clip-path: polygon(36% 88%, 48% 66%, 58% 86%, 83% 57%, 100% 100%, 0 100%, 3% 50%);
-            }
-
-        }
-
-        &-2 {
-
-            background-image: linear-gradient(to right bottom,
-                rgba(@darkblue, 0.4),
-                rgba(@lightblue, 0.4));
-            background-size: cover;
-            background-position: top;
-
-            @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-                -webkit-clip-path: polygon(36% 88%, 54% 46%, 67% 81%, 87% 21%, 100% 100%, 0 100%, 21% 63%);
-                clip-path: polygon(36% 88%, 54% 46%, 67% 81%, 87% 21%, 100% 100%, 0 100%, 21% 63%);
-            }
-
-        }
-
-        &-3 {
-
-            @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-                -webkit-clip-path: polygon(37% 81%, 55% 41%, 73% 82%, 86% 56%, 100% 100%, 0 100%, 22% 5%);
-                clip-path: polygon(37% 81%, 55% 41%, 73% 82%, 86% 56%, 100% 100%, 0 100%, 22% 5%);
-            }
-        }
+    @media @mobile {
+      width: 100%;
+      left: 0;
     }
 
-    .title {
-        
-        background-image: linear-gradient(to top, @gray, @white);
-        -webkit-background-clip: text;
-        color: transparent;
+    @media @tablet {
+      width: 70%;
+      left: 15%;
+      height: 35vh;
 
-        margin-top: 22vh;
-        margin-bottom: 30px;
-
-        animation: fontSizeGrow 1s;
-
-        @media @tablet {
-            margin-top: 37vh;
-        }
+      animation: risingGraphTablet 1s;
     }
 
-    
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(@darkpurple, 0.4),
+      rgba(@lightpurple, 0.4)
+    );
+    background-size: cover;
+    background-position: top;
+
+    &-1 {
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(
+          36% 88%,
+          48% 66%,
+          58% 86%,
+          83% 57%,
+          100% 100%,
+          0 100%,
+          3% 50%
+        );
+        clip-path: polygon(
+          36% 88%,
+          48% 66%,
+          58% 86%,
+          83% 57%,
+          100% 100%,
+          0 100%,
+          3% 50%
+        );
+      }
+    }
+
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(@darkblue, 0.4),
+        rgba(@lightblue, 0.4)
+      );
+      background-size: cover;
+      background-position: top;
+
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(
+          36% 88%,
+          54% 46%,
+          67% 81%,
+          87% 21%,
+          100% 100%,
+          0 100%,
+          21% 63%
+        );
+        clip-path: polygon(
+          36% 88%,
+          54% 46%,
+          67% 81%,
+          87% 21%,
+          100% 100%,
+          0 100%,
+          21% 63%
+        );
+      }
+    }
+
+    &-3 {
+      @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(
+          37% 81%,
+          55% 41%,
+          73% 82%,
+          86% 56%,
+          100% 100%,
+          0 100%,
+          22% 5%
+        );
+        clip-path: polygon(
+          37% 81%,
+          55% 41%,
+          73% 82%,
+          86% 56%,
+          100% 100%,
+          0 100%,
+          22% 5%
+        );
+      }
+    }
+  }
+
+  .title {
+    background-image: linear-gradient(to top, @gray, @white);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    margin-top: 22vh;
+    margin-bottom: 30px;
+
+    animation: fontSizeGrow 500ms;
+
+    @media @tablet {
+      margin-top: 37vh;
+    }
+  }
 }

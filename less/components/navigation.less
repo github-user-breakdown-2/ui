@@ -1,54 +1,53 @@
 .nav {
-    &-button {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 3;
-        
-        .fancy-button();
+  &-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
 
-        font-size: 2rem;
-        transform: rotate(90deg);
+    .fancy-button();
+
+    font-size: 2rem;
+    transform: rotate(90deg);
+  }
+
+  &-menu {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+
+    display: none;
+    flex-direction: column;
+
+    z-index: 3;
+    width: 20%;
+    background: @white;
+    border-radius: 3px;
+    animation: fadeIn 2s;
+
+    @media @mobile {
+      width: 50%;
     }
 
-    &-menu {
-        position: fixed;
-        top: 80px;
-        left: 20px;
-
-        display: none;
-        flex-direction: column;
-
-        z-index: 3;
-        width: 20%;
-        background: @white;
-        border-radius: 3px;
-        animation: fadeIn 2s;
-        
-        @media @mobile {
-            width: 50%;
-        }
-
-        @media @tablet {
-            width: 30%;
-        }
-
-        &-active {
-            display: flex;
-        }
-
-        &-item {
-            padding: 10px 0;
-            font-size: 1.8rem;
-            color: @black;
-            text-decoration: none;
-
-            border-bottom: 1px solid @gray;
-        }
-
-        &-item:last-of-type {
-            border-bottom: none;
-        }
+    @media @tablet {
+      width: 30%;
     }
 
+    &-active {
+      display: flex;
+    }
+
+    &-item {
+      padding: 10px 0;
+      font-size: 1.8rem;
+      color: @black;
+      text-decoration: none;
+
+      border-bottom: 1px solid @gray;
+    }
+
+    &-item:last-of-type {
+      border-bottom: none;
+    }
+  }
 }
