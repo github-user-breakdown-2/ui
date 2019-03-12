@@ -429,9 +429,15 @@ ul {
   }
 }
 .team .teammate-photo {
-  width: 50%;
-  height: 50%;
+  width: 35%;
+  height: 35%;
   border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .team .teammate-photo {
+    width: 50%;
+    height: 50%;
+  }
 }
 .team .teammate-info {
   margin-top: 5px;
@@ -450,6 +456,7 @@ ul {
 }
 .footer {
   margin: 40px 0;
+  text-align: center;
 }
 .footer .social-icon {
   color: #f8f8f8;

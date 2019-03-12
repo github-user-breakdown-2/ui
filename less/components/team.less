@@ -17,9 +17,14 @@
         }
 
         &-photo {
-            width: 50%;
-            height: 50%;
+            width: 35%;
+            height: 35%;
             border-radius: 50%;
+
+            @media @mobile {
+                width: 50%;
+                height: 50%;
+            }
         }
 
         &-info {
