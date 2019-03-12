@@ -3,25 +3,16 @@
         position: fixed;
         top: 20px;
         left: 20px;
-        padding: 15px;
-
-        background-image: linear-gradient(to right bottom,
-            rgba(@darkblue, 1),
-            rgba(@darkpurple, 1));
-        color: @white;
+        
+        .fancy-button();
 
         font-size: 2rem;
-
-        border: 1px solid @black;
-        border-radius: 3px;
-        outline: none;
-
         transform: rotate(90deg);
     }
 
     &-menu {
         position: fixed;
-        top: 100px;
+        top: 80px;
         left: 20px;
 
         display: none;
@@ -30,7 +21,8 @@
         background: @white;
         border-radius: 3px;
 
-        width: 20%;
+        width: 10%;
+        animation: fadeIn 3s;
 
         &-active {
             display: flex;
