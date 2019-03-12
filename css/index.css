@@ -241,8 +241,9 @@ ul {
     margin: 0;
   }
 }
-.main-content .features .card-image {
+.main-content .features .card-icon {
   margin: 20px 0;
+  font-size: 15rem;
 }
 .main-content .features .card-title {
   font-size: 3rem;
@@ -300,7 +301,7 @@ ul {
     flex-direction: row;
   }
 }
-.main-content .description .info-image {
+.main-content .description .info-icon {
   margin: 0 auto;
 }
 .main-content .description .info-text {
@@ -391,7 +392,7 @@ ul {
   outline: none;
   font-size: 3rem;
   padding: 20px;
-  animation: backgroundShift 50ms infinite;
+  animation: backgroundShift 500ms infinite;
 }
 .header .call-to-action:active {
   animation: shake 1s;
