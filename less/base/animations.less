@@ -48,3 +48,29 @@
         transform: translate3d(6px, 0, 0);
     }
 }
+
+@keyframes backgroundShift {
+    10% {
+        background-image: linear-gradient(to right bottom,
+        rgba(@darkblue, 1),
+        rgba(@darkpurple, 1));
+    }
+
+    50% {
+        background-image: linear-gradient(to right bottom,
+        rgba(@darkpurple, 1),
+        rgba(@darkblue, 1));
+    }
+
+    80% {
+        background-image: linear-gradient(to right bottom,
+        rgba(@lightpurple, 1),
+        rgba(@darkblue, 1));
+    }
+
+    100% {
+        background-image: linear-gradient(to right bottom,
+        rgba(@lightblue, 1),
+        rgba(@darkpurple, 1));
+    }
+}

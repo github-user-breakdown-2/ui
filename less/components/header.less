@@ -79,11 +79,13 @@
 
     .call-to-action {
         width: 30%;
-        margin: 30px auto;
+        margin: 0 auto;
         
-        font-size: 3rem;
         .fancy-button();
+        font-size: 3rem;
         padding: 20px;
+
+        animation: backgroundShift 50ms infinite;
 
         @media @mobile {
             width: 90%;

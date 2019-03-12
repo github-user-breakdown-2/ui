@@ -173,6 +173,20 @@ table {
     transform: translate3d(6px, 0, 0);
   }
 }
+@keyframes backgroundShift {
+  10% {
+    background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
+  }
+  50% {
+    background-image: linear-gradient(to right bottom, #5933f0, #007ae1);
+  }
+  80% {
+    background-image: linear-gradient(to right bottom, #9f86ff, #007ae1);
+  }
+  100% {
+    background-image: linear-gradient(to right bottom, #1ca8dd, #5933f0);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -211,10 +225,11 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  height: 400px;
 }
 .main-content .features .card {
   display: none;
-  height: 400px;
+  height: 100%;
   width: 50%;
   margin: 30px;
   padding: 10px;
@@ -367,15 +382,16 @@ ul {
 }
 .header .call-to-action {
   width: 30%;
-  margin: 30px auto;
-  font-size: 3rem;
+  margin: 0 auto;
   padding: 10px;
   background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
   color: #f8f8f8;
   border: 1px solid #2f323a;
   border-radius: 5px;
   outline: none;
+  font-size: 3rem;
   padding: 20px;
+  animation: backgroundShift 50ms infinite;
 }
 .header .call-to-action:active {
   animation: shake 1s;
@@ -400,6 +416,7 @@ ul {
   position: fixed;
   top: 20px;
   left: 20px;
+  z-index: 3;
   padding: 10px;
   background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
   color: #f8f8f8;
@@ -418,10 +435,21 @@ ul {
   left: 20px;
   display: none;
   flex-direction: column;
+  z-index: 3;
+  width: 20%;
   background: #f8f8f8;
   border-radius: 3px;
-  width: 10%;
-  animation: fadeIn 3s;
+  animation: fadeIn 2s;
+}
+@media (max-width: 500px) {
+  .nav-menu {
+    width: 50%;
+  }
+}
+@media (min-width: 500px) and (max-width: 800px) {
+  .nav-menu {
+    width: 30%;
+  }
 }
 .nav-menu-active {
   display: flex;
@@ -429,7 +457,7 @@ ul {
 .nav-menu-item {
   padding: 10px 0;
   font-size: 1.8rem;
-  color: #9ca4b6;
+  color: #2f323a;
   text-decoration: none;
   border-bottom: 1px solid #9ca4b6;
 }

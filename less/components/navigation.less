@@ -3,6 +3,7 @@
         position: fixed;
         top: 20px;
         left: 20px;
+        z-index: 3;
         
         .fancy-button();
 
@@ -18,11 +19,19 @@
         display: none;
         flex-direction: column;
 
+        z-index: 3;
+        width: 20%;
         background: @white;
         border-radius: 3px;
+        animation: fadeIn 2s;
+        
+        @media @mobile {
+            width: 50%;
+        }
 
-        width: 10%;
-        animation: fadeIn 3s;
+        @media @tablet {
+            width: 30%;
+        }
 
         &-active {
             display: flex;
@@ -31,7 +40,7 @@
         &-item {
             padding: 10px 0;
             font-size: 1.8rem;
-            color: @gray;
+            color: @black;
             text-decoration: none;
 
             border-bottom: 1px solid @gray;
