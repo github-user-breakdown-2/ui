@@ -171,32 +171,21 @@ table {
     transform: translate3d(6px, 0, 0);
   }
 }
-@keyframes attentionGrabber {
-  10% {
-    background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
-  }
-  50% {
-    background-image: linear-gradient(to right bottom, #5933f0, #007ae1);
-  }
-  80% {
-    background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
-  }
-  100% {
-    background-image: linear-gradient(to right bottom, #5933f0, #007ae1);
-    transform: scale(1.1);
-  }
-}
 @keyframes gradientShift {
   10% {
+    color: #f8f8f8;
     background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
   }
   50% {
+    color: #f8f8f8;
     background-image: linear-gradient(to right bottom, #5933f0, #007ae1);
   }
   80% {
+    color: #f8f8f8;
     background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
   }
   100% {
+    color: #f8f8f8;
     background-image: linear-gradient(to right bottom, #5933f0, #007ae1);
   }
 }
@@ -307,14 +296,25 @@ ul {
   margin-bottom: 30px;
   animation: fontSizeGrow 500ms;
 }
-@media (min-width: 500px) and (max-width: 800px) {
-  .header .title {
-    margin-top: 37vh;
-  }
+.header .sub-title {
+  background-image: linear-gradient(to right bottom, #9ca4b6, #f8f8f8);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
 }
 .call-to-action {
+  margin: 50px 0;
+}
+.call-to-action-text {
+  font-size: 3rem;
+  background-image: linear-gradient(to right bottom, rgba(156, 164, 182, 0.6), rgba(248, 248, 248, 0.6));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.call-to-action-button {
   width: 30%;
-  margin: 35px auto;
+  margin: 35px 0;
+  padding: 20px;
   padding: 10px;
   background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
   color: #f8f8f8;
@@ -322,21 +322,25 @@ ul {
   border-radius: 5px;
   outline: none;
   font-size: 3rem;
-  padding: 20px;
-  animation: attentionGrabber 1s 1.5s;
+  cursor: pointer;
+  animation: gradientShift 1s 1.5s;
 }
-.call-to-action:active {
+.call-to-action-button:active {
   animation: shake 1s;
 }
 @media (max-width: 500px) {
-  .call-to-action {
+  .call-to-action-button {
     width: 90%;
   }
 }
 @media (min-width: 500px) and (max-width: 800px) {
-  .call-to-action {
+  .call-to-action-button {
     width: 60%;
   }
+}
+.call-to-action-button:hover {
+  color: #2f323a;
+  background-image: linear-gradient(to right bottom, rgba(28, 168, 221, 0.4), rgba(159, 134, 255, 0.4));
 }
 .features {
   display: flex;
@@ -530,6 +534,13 @@ ul {
 }
 .footer-copyright {
   margin: 20px;
+  font-size: 1.5rem;
+}
+.footer-attribution {
+  font-size: 1.2rem;
+}
+.footer-attribution a {
+  color: #f8f8f8;
 }
 .nav-button {
   position: fixed;
@@ -542,7 +553,7 @@ ul {
   border: 1px solid #2f323a;
   border-radius: 5px;
   outline: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transform: rotate(90deg);
 }
 .nav-button:active {
@@ -580,10 +591,11 @@ ul {
   text-decoration: none;
   border-bottom: 1px solid #9ca4b6;
 }
-.nav-menu-item:first-of-type {
-  color: #f8f8f8;
+.nav-menu-item:hover {
   background-image: linear-gradient(to right bottom, #5933f0, #007ae1);
-  animation: gradientShift 1.75s;
+  color: #f8f8f8;
+}
+.nav-menu-item:first-of-type {
   border-radius: 4px 4px 0 0;
 }
 .nav-menu-item:last-of-type {

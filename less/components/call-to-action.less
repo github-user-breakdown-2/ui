@@ -1,18 +1,35 @@
 .call-to-action {
-    width: 30%;
-    margin: 35px auto;
+    margin: 50px 0;
 
-    .fancy-button();
-    font-size: 3rem;
-    padding: 20px;
-
-    animation: attentionGrabber 1s 1.5s;
-
-    @media @mobile {
-        width: 90%;
+    &-text {
+        font-size: 3rem;
+        .gradient(@gray, @white, .6);
+        -webkit-background-clip: text;
+        color: transparent;
     }
 
-    @media @tablet {
-        width: 60%;
+    &-button {
+        width: 30%;
+        margin: 35px 0;
+        padding: 20px;
+
+        .fancy-button();
+        font-size: 3rem;
+        cursor: pointer;
+
+        animation: gradientShift 1s 1.5s;
+
+        @media @mobile {
+            width: 90%;
+        }
+
+        @media @tablet {
+            width: 60%;
+        }
+    }
+
+    &-button:hover {
+        color: @black;
+        .gradient(@lightblue, @lightpurple, .4);
     }
 }

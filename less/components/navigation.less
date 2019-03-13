@@ -7,7 +7,7 @@
 
     .fancy-button();
 
-    font-size: 2rem;
+    font-size: 1.5rem;
     transform: rotate(90deg);
   }
 
@@ -46,10 +46,12 @@
       border-bottom: 1px solid @gray;
     }
 
-    &-item:first-of-type {
-      color: @white;
+    &-item:hover{
       .gradient(@darkpurple, @darkblue, 1);
-      animation: gradientShift 1.75s;
+      color: @white;
+    }
+
+    &-item:first-of-type {
       border-radius: 4px 4px 0 0;
     }
 
