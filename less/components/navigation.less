@@ -20,13 +20,13 @@
     flex-direction: column;
 
     z-index: 3;
-    width: 20%;
+    width: 15%;
     background: @white;
-    border-radius: 3px;
-    animation: fadeIn 2s;
+    border-radius: 5px;
+    animation: moveInTop 450ms;
 
     @media @mobile {
-      width: 50%;
+      width: 40%;
     }
 
     @media @tablet {
@@ -44,6 +44,13 @@
       text-decoration: none;
 
       border-bottom: 1px solid @gray;
+    }
+
+    &-item:first-of-type {
+      color: @white;
+      .gradient(@darkpurple, @darkblue, 1);
+      animation: gradientShift 1.75s;
+      border-radius: 4px 4px 0 0;
     }
 
     &-item:last-of-type {
