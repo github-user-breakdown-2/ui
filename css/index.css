@@ -313,7 +313,7 @@ ul {
 }
 .call-to-action-button {
   width: 30%;
-  margin: 35px 0;
+  margin-top: 35px;
   padding: 20px;
   padding: 10px;
   background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
@@ -451,7 +451,6 @@ ul {
   justify-content: space-evenly;
   align-items: space-evenly;
   flex-wrap: wrap;
-  border-top: 1px solid #f8f8f8;
 }
 .team .teammate {
   display: flex;
@@ -598,6 +597,7 @@ ul {
   color: #f8f8f8;
 }
 .nav-menu-item:first-of-type {
+  animation: gradientShift 1s;
   border-radius: 4px 4px 0 0;
 }
 .nav-menu-item:last-of-type {
