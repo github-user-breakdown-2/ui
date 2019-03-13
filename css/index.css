@@ -462,6 +462,11 @@ ul {
     width: 100%;
   }
 }
+@media (min-width: 500px) and (max-width: 800px) {
+  .team .teammate {
+    width: 75%;
+  }
+}
 .team .teammate-photo {
   width: 100px;
   height: 100px;

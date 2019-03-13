@@ -1,134 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="css/index.css" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="img/favicon-area-chart.ico"
-    />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
-      integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
-      crossorigin="anonymous"
-    ></script>
-    <script async src="js/carousel.js"></script>
-    <script async src="js/navigation.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
 
-    <title>Github | User Breakdown</title>
-  </head>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon-area-chart.ico" />
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+    crossorigin="anonymous"></script>
+  <script async src="js/carousel.js"></script>
+  <script async src="js/navigation.js"></script>
 
-  <body>
-    <div class="container">
-      <nav class="nav">
-        <button class="nav-button">||||</button>
-        <div class="nav-menu">
-          <a href="#" class="nav-menu-item">Analyze User</a>
-          <a href="/" class="nav-menu-item">Features</a>
-          <a href="/team.html" class="nav-menu-item">Our Team</a>
+  <title>Github | User Breakdown</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="nav">
+      <button class="nav-button">||||</button>
+      <div class="nav-menu">
+        <a href="#" class="nav-menu-item">Analyze User</a>
+        <a href="/" class="nav-menu-item">Features</a>
+        <a href="/team.html" class="nav-menu-item">Our Team</a>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div class="chart-container">
+        <div class="chart chart-1"></div>
+        <div class="chart chart-2"></div>
+        <div class="chart chart-3"></div>
+      </div>
+      <h1 class="title">
+        GitHub User Breakdown
+      </h1>
+    </header>
+
+    <main class="main-content">
+      <button class="call-to-action">Analyze User</button>
+
+      <section class="features">
+        <button class="button left-button">
+          <i class="fas fa-angle-double-left"></i>
+        </button>
+        <div class="card">
+          <i class="card-icon fas fa-chart-area"></i>
+          <h2 class="card-title">User Statistics</h2>
+          <p class="card-info">
+            How does their activity stack up?
+          </p>
         </div>
-      </nav>
-
-      <header class="header">
-        <div class="chart-container">
-          <div class="chart chart-1"></div>
-          <div class="chart chart-2"></div>
-          <div class="chart chart-3"></div>
+        <div class="card">
+          <i class="card-icon fas fa-language"></i>
+          <h2 class="card-title">Language Proficiency</h2>
+          <p class="card-info">
+            What languages do they use most?
+          </p>
         </div>
-        <h1 class="title">
-          GitHub User Breakdown
-        </h1>
-      </header>
+        <div class="card">
+          <i class="card-icon fas fa-chart-bar"></i>
+          <h2 class="card-title">Repository Analysis</h2>
+          <p class="card-info">
+            Which repositories have they contributed to?
+          </p>
+        </div>
 
-      <main class="main-content">
-        <button class="call-to-action">Analyze User</button>
+        <button class="button right-button">
+          <i class="fas fa-angle-double-right"></i>
+        </button>
+      </section>
 
-        <section class="features">
-          <button class="button left-button">
-            <i class="fas fa-angle-double-left"></i>
-          </button>
-          <div class="card">
-            <i class="card-icon fas fa-chart-area"></i>
-            <h2 class="card-title">User Statistics</h2>
-            <p class="card-info">
-              How does their activity stack up?
-            </p>
-          </div>
-          <div class="card">
-            <i class="card-icon fas fa-language"></i>
-            <h2 class="card-title">Language Proficiency</h2>
-            <p class="card-info">
-              What languages do they use most?
-            </p>
-          </div>
-          <div class="card">
-            <i class="card-icon fas fa-chart-bar"></i>
-            <h2 class="card-title">Repository Analysis</h2>
-            <p class="card-info">
-              Which repositories have they contributed to?
-            </p>
-          </div>
+      <section class="description">
+        <div class="info">
+          <i class="info-icon fab fa-github"></i>
+          <p class="info-text">
+            GitHub is home to over 28 million developers working together to host and review code, manage projects, and
+            build software together. Each and every developer using GitHub has a profile that is visible to the public!
+          </p>
+        </div>
+        <div class="info info-reverse">
+          <i class="info-icon fas fa-code-branch"></i>
+          <p class="info-text">
+            This is where GitHub gets interesting for recruiters! GitHub user profiles contain all sorts of fantastic
+            information. User statistics and repository analysis
+            can be a great tool to size up potential job candidates.
+          </p>
+        </div>
+        <div class="info">
+          <i class="info-icon fas fa-poll-h"></i>
+          <p class="info-text">
+            GitHub User Breakdown allows anyone to easily lookup any GitHub user to see the frequency of their
+            commits, which repositories they have contributed to, which languages they are proficient in, and which
+            times of the day or week they are most active!
+          </p>
+        </div>
+      </section>
+    </main>
 
-          <button class="button right-button">
-            <i class="fas fa-angle-double-right"></i>
-          </button>
-        </section>
+    <footer class="footer">
+      <p class="footer-info">
+        Do you have some feedback or want to contribute?! <br />
+        We'd love to hear from you! <br />
 
-        <section class="description">
-          <div class="info">
-            <i class="info-icon fab fa-github"></i>
-            <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              harum, id fuga optio cum necessitatibus. Error totam id cumque,
-              voluptas tempore veritatis magnam exercitationem velit corporis
-              quas hic cum veniam!
-            </p>
-          </div>
-          <div class="info info-reverse">
-            <i class="info-icon fas fa-code-branch"></i>
-            <p class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-              repellat dolorum doloribus ducimus fugit nobis eius, distinctio
-              temporibus, laborum cupiditate corporis deserunt ipsam totam. Modi
-              culpa cupiditate alias soluta optio.
-            </p>
-          </div>
-          <div class="info">
-            <i class="info-icon fas fa-poll-h"></i>
-            <p class="info-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-              consequatur consectetur quae in libero, nobis cumque dolorem vel
-              perferendis qui obcaecati asperiores corrupti autem quibusdam.
-              Vitae facilis sunt perferendis eum.
-            </p>
-          </div>
-        </section>
-      </main>
+        <a href="https://github.com/github-user-breakdown-2"><i class="social-icon fab fa-github"></i></a>
+        <!-- <a href="#"><i class="social-icon fab fa-facebook"></i></a> -->
+        <!-- <a href="#"><i class="social-icon fab fa-twitter"></i></a> -->
+      </p>
+      <p class="footer-copyright">
+        &copy; Copyright 2019 <br />
+        ACME Website Co.
+      </p>
+    </footer>
+  </div>
+</body>
 
-      <footer class="footer">
-        <p class="footer-info">
-          How about you get in contact with us?! <br />
-          We'd love to hear from you! <br />
-
-          <a href="#"><i class="social-icon fab fa-github"></i></a>
-          <a href="#"><i class="social-icon fab fa-facebook"></i></a>
-          <a href="#"><i class="social-icon fab fa-twitter"></i></a>
-        </p>
-        <p class="footer-copyright">
-          &copy; Copyright 2019 <br />
-          ACME Website Co.
-        </p>
-      </footer>
-    </div>
-  </body>
 </html>
