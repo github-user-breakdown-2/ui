@@ -347,7 +347,6 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #f8f8f8;
 }
 .features .card {
   display: none;
@@ -473,7 +472,7 @@ ul {
     width: 75%;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .team .teammate {
     padding: 50px 20px;
   }
@@ -521,12 +520,18 @@ ul {
   height: 35px;
   margin-top: 5px;
 }
+@media (min-width: 800px) {
+  .footer {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
 .footer .footer-info {
   margin: 20px;
   padding: 30px;
   font-size: 2rem;
-  border-top: 1px solid #f8f8f8;
-  border-bottom: 1px solid #f8f8f8;
+  border-top: 1px dashed #f8f8f8;
+  border-bottom: 1px dashed #f8f8f8;
 }
 .footer .footer-info .social-icon {
   color: #f8f8f8;

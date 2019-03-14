@@ -1,10 +1,15 @@
 .footer {
+  @media @large {
+    margin: 0 auto;
+    width: 60%;
+  }
+  
   .footer-info {
     margin: 20px;
     padding: 30px;
     font-size: 2rem;
-    border-top: 1px solid @white;
-    border-bottom: 1px solid @white;
+    border-top: 1px dashed @white;
+    border-bottom: 1px dashed @white;
 
     .social-icon {
       color: @white;
