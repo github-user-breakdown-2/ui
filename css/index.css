@@ -520,12 +520,6 @@ ul {
   height: 35px;
   margin-top: 5px;
 }
-@media (min-width: 800px) {
-  .footer {
-    margin: 0 auto;
-    width: 60%;
-  }
-}
 .footer .footer-info {
   margin: 20px;
   padding: 30px;
@@ -533,12 +527,19 @@ ul {
   border-top: 1px dashed #f8f8f8;
   border-bottom: 1px dashed #f8f8f8;
 }
+@media (min-width: 800px) {
+  .footer .footer-info {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
 .footer .footer-info .social-icon {
   color: #f8f8f8;
   font-size: 5rem;
   margin-top: 20px;
 }
 .footer-copyright {
+  margin-top: 10px;
   font-size: 1.5rem;
 }
 .footer-attribution {

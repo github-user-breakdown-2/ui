@@ -1,8 +1,4 @@
 .footer {
-  @media @large {
-    margin: 0 auto;
-    width: 60%;
-  }
   
   .footer-info {
     margin: 20px;
@@ -10,6 +6,11 @@
     font-size: 2rem;
     border-top: 1px dashed @white;
     border-bottom: 1px dashed @white;
+
+    @media @large {
+      margin: 0 auto;
+      width: 60%;
+    }
 
     .social-icon {
       color: @white;
@@ -20,6 +21,7 @@
   }
 
   &-copyright {
+    margin-top: 10px;
     font-size: 1.5rem;
   }
 
