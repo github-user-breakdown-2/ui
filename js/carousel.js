@@ -41,7 +41,7 @@ class Carousel {
 
     this.timer = setInterval(() => {
       this.changeItem(true);
-    }, 3000);
+    }, 4000);
   }
 }
 
