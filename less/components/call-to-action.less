@@ -1,7 +1,14 @@
 .call-to-action {
     margin: 50px 0;
 
-    &-text {
+    &-heading {
+        font-size: 3rem;
+        .gradient(@gray, @white, .6);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &-subheading {
         font-size: 3rem;
         .gradient(@gray, @white, .6);
         -webkit-background-clip: text;
@@ -10,7 +17,7 @@
 
     &-button {
         width: 30%;
-        margin-top: 35px;
+        margin-top: 5px;
         padding: 20px;
 
         .fancy-button();

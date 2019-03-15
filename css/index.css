@@ -305,7 +305,13 @@ ul {
 .call-to-action {
   margin: 50px 0;
 }
-.call-to-action-text {
+.call-to-action-heading {
+  font-size: 3rem;
+  background-image: linear-gradient(to right bottom, rgba(156, 164, 182, 0.6), rgba(248, 248, 248, 0.6));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.call-to-action-subheading {
   font-size: 3rem;
   background-image: linear-gradient(to right bottom, rgba(156, 164, 182, 0.6), rgba(248, 248, 248, 0.6));
   -webkit-background-clip: text;
@@ -313,7 +319,7 @@ ul {
 }
 .call-to-action-button {
   width: 30%;
-  margin-top: 35px;
+  margin-top: 5px;
   padding: 20px;
   padding: 10px;
   background-image: linear-gradient(to right bottom, #007ae1, #5933f0);
